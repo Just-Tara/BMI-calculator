@@ -1,0 +1,30 @@
+:root {
+    --bg-color: linear-gradient(to bottom right, #111113, #36125c);
+    --text-color-1:#d9d9d9;
+    --text-color-2: #111;
+    --purple-2: #68359E;
+   
+}
+body.light-theme{
+    --bg-color:linear-gradient(to bottom right,  #836a9e -80%, #d9d9d9);
+    --text-color-1: #111;
+    --text-color-2:#aaa;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: var(--bg-color);
+      color: var(--text-color-1);
+      min-height: 100vh;
+    }
+    h1 {
+      color: var(--purple-2);
+    }
+    ul {
+      line-height: 1.8;
+    }
+    a{
+      color: var(--purple-2);
+      text-decoration: none;
+    }

@@ -1,0 +1,527 @@
+:root {
+    --bg-color: linear-gradient(to bottom right, #111113, #36125c);
+    --text-color-1:#d9d9d9;
+    --text-color-2: #111;
+    --purple-1:  #36125c;
+    --purple-2: #68359E;
+    --menu: #19181b;
+    --bg-color-circle:conic-gradient(#836a9e 0% 0%, #19181b 0% 100%);
+    --bg-section-2:rgba(225, 225, 225, 0.1);
+    --bg-modal-content: #aaa;
+    --text-color: #d9d9d9;
+    --add-button:#444;
+}
+body.light-theme{
+    --bg-color:linear-gradient(to bottom,  #836a9e -80%, #d9d9d9);
+    --text-color-1: #111;
+    --text-color-2:#aaa;
+    --bg-section-2:#aaa;
+    --menu:#ccc;
+     --text-color: #d9d9d9;
+     --bg-modal-content: #555;
+     --add-button:#999;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--menu);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+     width: 100%;   
+}
+.container{  
+    margin: auto; 
+    display: flex;
+    color:var(--text-color-1);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header a, header li{
+    color:var(--text-color-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: flex;
+    font-weight: 400;
+    cursor: pointer;
+    
+}
+header{
+background: var(--bg-color);
+ border: 1px solid var(--purple-1);
+ border-radius: 8px;
+
+}
+header li span i{
+    margin:-20px 10px 10px 20px;
+}
+header, .health-tips{
+ padding-top: 30px;
+ width: 20%;
+ padding-left: 10px;
+}
+
+.menu{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    header h2{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+h2 span {
+     border: 3px solid var(--text-color-1);
+    z-index:1;
+    font-size: 60px;
+    border-radius: 50%;
+    padding: 3px 6px 1px 6px;
+    background-color: var(--text-color-1);
+}
+h2 span i{
+    color: var(--text-color-2);
+} nav{
+    margin-top: 70px;
+    margin-left: 5px;
+}
+main{
+    width: 50%;
+    background: var(--menu);
+    padding: 0 30px 0 30px;
+    min-height: 100vh;
+    border-radius: 20px;
+margin: 20px auto;
+
+}
+.section-1, .section-2, .section-3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}.section-1{
+    margin-top: 30px;
+
+}
+.gender-adjustment{
+margin: 20px auto;
+}
+.section-1, .section-3{
+   justify-content: space-between;
+  
+}.section-2{
+    background-color: var(--bg-section-2);
+    backdrop-filter: blur();
+    padding: 20px;
+    border-radius: 8px;
+}.section-2-side1{
+    position: relative;
+    top: 30px;
+    right: 20px;
+
+}
+summary{
+    position: relative;
+    top: 5px;
+}
+.weight-box{
+    border: 1px solid var(--text-color-1);
+    background: var(--text-color-1);
+    color: var(--text-color-2);
+}
+.weight-age{
+position: relative;
+    border-bottom: 3px solid var(--text-color-2);
+    border-radius: 8px;
+    margin: 0 auto;
+    top: -10px;
+    width: 40%;
+   
+}
+.weight-age input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color-2);
+    font-size: 14px;
+    width: 50px;
+    text-align: center;
+}
+.weight-box button{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    font-weight: 500;
+    font-size: 30px;
+    border: none;
+    color: var(--text-color);
+    background: var(--add-button);
+}
+.gender span i{
+    font-size: 67px;
+    color: var(--purple-2);
+    display: flex;
+    position:relative;
+    top: 5px;
+    justify-content: center;
+}
+.gender{
+    border: 2px solid var(--purple-2);
+}.genderError{
+    color: red; margin: 20px auto; width: 80%;
+}
+.gender.active {
+    background-color: var(--text-color-1);
+    color: var(--purple-1);
+    font-weight: bold;
+    transform: scale(1.1); 
+}.gender.active p{
+    font-size:18px;
+}
+
+.gender, .weight-box{
+     width: 45%;
+    height: 140px;
+    border-radius: 8px;
+    text-align: center;
+}
+.hidden {
+  display: none;
+}
+
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1000;
+overflow:auto;
+background-color: rgba(0, 0, 0, 0.4);
+}	
+.modal-content {
+  background:var(--bg-modal-content);
+  padding:20px;
+  margin: 10% auto;
+  border-radius: 40px;
+  width: 300px;
+  max-width: 100%;
+  color: var(--text-color-2);
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}.modal-content input{
+    accent-color: var(--purple-2);
+    transform: scale(1.3);
+}.modal-content span {
+    margin-right:20px;
+}
+.modal-content input, .modal-content label{
+    cursor: pointer;
+}
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+  z-index: 10000;
+}
+
+.buttons button{
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+
+   background-color:transparent;
+}
+
+#ok-btn {
+  color:var(--purple-1);
+}
+
+#cancel-btn {
+    font-size: 18px;
+  color:var(--purple-1);
+
+}
+.open-menu, .close-menu{
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    right: 25px;
+    margin-top: 10px;
+}
+.close-menu{
+    margin-top: 45px;
+    top: 0;
+}
+
+#check{display: none;}
+.circle{
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--bg-color-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-1);
+    font-weight: bold;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+.circle::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background:var(--text-color-2);
+    border-radius: 50%;
+}.circle span{
+    position: relative;
+    z-index: 1;
+}
+.input-container{
+    position: relative;
+    border: 2px solid var(--text-color-1);
+    border-radius: 8px;
+    padding: 8px;
+    width: 60%;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.input-container:hover,
+.input-container:focus-within{
+    border-color: var(--purple-2);
+    box-shadow: 0 0 8px var(--purple-2);
+}
+.input-container input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color-1);
+    font-size: 14px;
+    width: 150px;
+
+}.input-container label{
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color:var(--text-color-1);
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    padding: 0 4px;
+    background: var(--text-color-2);
+}
+.input-container input:focus + label, 
+.input-container input:not(:placeholder-shown) + label{
+top: -8px;
+font-size: 13px;
+font-weight: 500;
+color:var(--text-color-1);
+}
+.btn-1{
+    width: 100%;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--purple-1);
+    border-radius: 5px;
+    font-size: 18px;
+}
+article{
+    margin: 0 30px;
+    width: 25%;
+    background: var(--bg-color);
+ border: 1px solid var(--purple-1);
+ border-radius: 8px;
+ margin: 0 0 0 8px;
+}article h3{
+    font-size: 23px;
+    position: relative;
+    top: 20px;
+}.general-health-tips{
+    width: 90%;
+    margin: auto;
+}
+.health-tips{
+    display: inline;
+    font-size: 18px;
+}.health-tips p{
+    position: relative;
+    bottom: 20px;
+    
+}
+.health-tips span{
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px){
+   .section-2-side1{
+    right: 0;
+}
+header{
+    width: 30%;
+}
+article{
+    display: none
+}
+}
+@media only screen and (max-width:680px) {
+html, body{
+    background:var(--bg-color);
+    
+}
+
+header{
+ padding-top: 30px;
+ min-height: 70px;
+ width: 100%;
+ background: none;
+ border: 1px none;
+ margin: auto;
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 15px 0 15px;     
+
+}h2 span {
+     border: 1px solid var(--text-color-1);
+    z-index:1;
+    font-size: 30px;
+    padding: 5px 5px 3px 5px;
+    border-radius: 50%;
+    
+    background-color: var(--text-color-1);
+} header h2{
+    display: inline;
+    position: relative;
+    top: 18px;
+    right: 5px;
+}
+header #branding{
+    float: left;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+.menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--menu);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li, .menu button {margin-top:40px;}
+.menu li a, .menu button{padding: 10px;}
+.open-menu, .close-menu{display: block;}
+#check:checked ~ .menu {right: 0;}
+.container{
+   width: 90%;
+   margin: auto;
+   flex-direction: column;
+}
+.modal-content {  
+  width: 250px;
+  margin: 40% auto;
+}
+
+main{
+    width: 100%;
+     background: none;
+    padding: 0;
+    min-height: 0;
+}
+article{
+    display: none;
+}.gender, .weight-box{
+height: 117px;
+}
+.circle{
+    width:110px;
+    height: 110px;
+    left: 20px;
+}
+.circle::before{
+    width: 80px;
+    height:80px;
+}
+.input-container label{
+    top: 8px;
+}
+}
+@media only screen and (max-width:375px) {
+    .circle{
+    width: 95px;
+    height: 95px;
+    font-size: 10px;
+}
+.circle::before{
+    width: 70px;
+    height: 70px;
+} 
+.gender span i{
+    font-size: px;
+}.section-2-side1{
+top: 20px;
+left: -10px;
+}
+}
+@media only screen and (max-width:340px) {
+    .circle{
+        width: 60px;
+        height: 60px;
+    }
+    .section-2-side1{
+        top: 10px;
+        left: -5px;
+    }
+    .circle::before{
+    width: 42px;
+    height: 42px;
+}
+.modal-content {  
+  width: 200px;
+}
+}@media only screen and (max-width:300px) {
+    .circle{
+        width: 50px;
+        height: 50px;
+        font-size: 8px;
+        left: -5px;
+    }
+    .section-2-side1{
+        top: 0;
+    }
+    .circle::before{
+    width: 32px;
+    height: 32px;
+}
+}
+@media only screen and (max-width:290px) {
+    .circle{
+        display: none;
+    }
+}
