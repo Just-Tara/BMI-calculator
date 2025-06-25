@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/resultSection.css">
+    <title>document</title>
+</head>
+<body>
+<div class="main-container">
+    <h1>Result</h1>
+    <div class="bmi-section">
+        <div class="category-panel">
+            <div class="category-box">
+                <div class="category obese" data-category="Obese" data-bmi-range="30.0+">Obese
+                    <div class="bmi-range-text">30.0 and above</div>
+                    </div>
+
+                    <div class="category overweight" data-category="Overweight" data-bmi-range="25.0-29.0">
+                    Overweight
+                    <div class="bmi-range-text">25.0 - 29.9</div>
+                    </div>
+
+                    <div class="category normalweight" data-category="Normal Weight" data-bmi-range="18.5-24.9">
+                    Normal Weight
+                    <div class="bmi-range-text">18.5 - 24.9</div>
+                    </div>
+
+                    <div class="category underweight" data-category="Under Weight" data-bmi-range="less-18.5">
+                    Under Weight
+                    <div class="bmi-range-text">Less than 18.5</div>
+                    </div>
+
+           
+            </div>
+             <div class="interactive-area">
+                <svg id="bmi-line-svg" viewpoint="0 0 200 240" perserveAspectRadio="none">
+                    <path id="diagonal-path" d="M 202.5 0 L 135 350" stroke="#111"
+                    stroke-width="2" fill="none"/>
+                </svg>
+                <div class="indicator-dot" id="bmiIndicatorDot"></div>
+                <div class="circle-label" id="circleLabel"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-display">
+        <div class="emoji-placeholder" id="resultEmoji"></div>
+        <div class="text-result" id="textResult"></div>
+    </div>
+    <div class="bmiOutput text-result">
+    </div>
+    <div class="backToBMI">
+         <a href="index.html">← Back to Home page
+         </a>
+    </div>
+    
+
+</div>
+
+<script src="../scripts/resultSection.js"></script>
+</body>
+</html>
