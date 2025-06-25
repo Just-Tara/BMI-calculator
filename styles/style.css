@@ -111,7 +111,7 @@ margin: 20px auto;
 
 }
 .gender-adjustment{
-margin: 20px auto;
+margin: 15px auto;
 }
 .section-1, .section-3{
    justify-content: space-between;
@@ -174,8 +174,6 @@ position: relative;
 }
 .gender{
     border: 2px solid var(--purple-2);
-}.genderError{
-    color: red; margin: 20px auto; width: 80%;
 }
 .gender.active {
     background-color: var(--text-color-1);
