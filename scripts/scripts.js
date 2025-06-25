@@ -120,7 +120,7 @@ console.log('Age:', age);
 // BMI calcution
 const bmi = weight / (height * height);
 localStorage.setItem('calculatedBMI', bmi.toFixed(1)); 
-window.location.href = "../views/resultSection.html";
+window.location.href = "./resultSection.html";
 
 
   })
